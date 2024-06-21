@@ -23,33 +23,15 @@ export default [
   //   _children: ['Components']
   // },
   {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Menu',
-    route: '/menus',
-    icon: 'cil-puzzle',
-    _children: [
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Test Code',
-        to: '/menus/TestCode',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'New Menu',
-        to: '/menus/NewMenu',
-      },
-    ]
-  },
-  {
     // _tag: 'CSidebarNavDropdown',
     // name: 'Pages',
     // route: '/pages',
     // icon: 'cil-star',
     // _children: [
     //   {
-        _tag: 'CSidebarNavItem',
-        name: 'Login',
-        to: '/login',
+        // _tag: 'CSidebarNavItem',
+        // name: 'Login',
+        // to: '/login',
       // }
       // ,
       // {
@@ -68,13 +50,47 @@ export default [
       //   to: '/500',
       // },
     // ]
+    _tag: 'CSidebarNavDropdown',
+    name: 'Account',
+    route: '/account',
+    icon: 'cilUser',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Login',
+        to: '/login',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Register',
+        to: '/register',
+      }
+    ]
 
   },
-
 
   {
     _tag: 'CSidebarNavDropdown',
     name: 'Menu',
+    route: '/menus',
+    icon: 'cil-puzzle',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Test Code',
+        to: '/menus/TestCode',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'New Menu',
+        to: '/menus/NewMenu',
+      },
+    ]
+  },
+
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Menu 2',
     route: '/menus',
     icon: 'cil-puzzle',
     _children: [
