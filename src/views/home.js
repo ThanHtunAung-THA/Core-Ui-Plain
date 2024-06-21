@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>Hello world</h1>
+      <h1>Hello world</h1> 
       <HomePrime
       name="mgmg"
       age="16"

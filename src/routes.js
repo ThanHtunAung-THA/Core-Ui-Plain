@@ -3,6 +3,8 @@ const TestCode = React.lazy(() => import('./views/menus/testCode/TestCode'));
 const NewMenu = React.lazy(() => import('./views/menus/newMenu/NewMenu'));
 const Home = React.lazy(() => import('./views/home'));
 const Register = React.lazy(() => import('./views/register'));
+const Register2 = React.lazy(() => import('./views/register2'));
+const Content = React.lazy(() => import('./views/pages/content/content'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -10,6 +12,8 @@ const routes = [
   { path: `/menus/NewMenu`, name: 'NewMenu', component: NewMenu},
   { path: `/home`, name: 'Home', component: Home},
   { path: `/register`, name: 'Register', component: Register},
+  { path: `/register2`, name: 'Register2', component: Register2},
+  { path: `/content`, name: 'Content', component: Content},
 ];
 
 export default routes;

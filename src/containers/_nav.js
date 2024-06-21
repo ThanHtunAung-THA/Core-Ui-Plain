@@ -80,26 +80,23 @@ export default [
     _children: [
       {
         _tag: 'CSidebarNavItem',
-        name: 'Test Code',
-        to: '/menus/TestCode',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'New Menu',
-        to: '/menus/NewMenu',
-      },
-      {
-        _tag: 'CSidebarNavItem',
         name: 'HomePage',
         to: '/home',
-        icon: 'cil-Home'
+        icon: 'cilHome'
 
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'RegisterPage',
-        to: '/register',
-        icon: ''
+        name: 'Register2',
+        to: '/register2',
+        icon: 'cilUser'
+
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'ContentPage',
+        to: '/content',
+        icon: 'cilInbox'
 
       },
 
