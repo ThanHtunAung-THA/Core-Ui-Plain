@@ -21,18 +21,18 @@ const Home = () => {
 
   return (
     <>
-      <h1>Hello world</h1> 
+      <h1>Hello world</h1>
       <HomePrime
-      name="mgmg"
-      age="16"
-      
-      save={saveClick}
+        name="mgmg"
+        age="16"
 
-      username = {username}
-      usernameChange = {usernameChange}
+        save={saveClick}
 
-      phone = {phone}
-      phoneChange = {phoneChange}
+        username = {username}
+        usernameChange = {usernameChange}
+
+        phone = {phone}
+        phoneChange = {phoneChange}
       />
 
     </>
