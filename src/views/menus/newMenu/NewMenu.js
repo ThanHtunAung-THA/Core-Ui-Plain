@@ -1,4 +1,4 @@
-import { CCol, CInput, CLabel, CRow, CSelect } from "@coreui/react";
+import { CButton, CCol, CInput, CLabel, CRow, CSelect } from "@coreui/react";
 import React, { useState } from "react";
 
 const NewMenu=()=>{
@@ -43,7 +43,7 @@ const NewMenu=()=>{
     setSelectedEskill(e.target.value);
   }
 
-  const Reset = () => {
+  const resetClick = () => {
     setName ('');
     setPhone ('');
     setEmail ('');
@@ -97,7 +97,7 @@ const NewMenu=()=>{
               <CCol lg="1"></CCol>
               <CCol lg="3"></CCol>
               <CCol lg="7">
-                <button type="submit" className="btn btn-primary"> Save </button>
+                {/* <button type="submit" className="btn btn-primary"> Save </button> */}
               </CCol>
             </CRow>
           </CCol>
@@ -139,14 +139,16 @@ const NewMenu=()=>{
               <CCol lg="1"></CCol>
               <CCol lg="3"></CCol>
               <CCol lg="7">
-                <button type="reset" className="btn btn-warning" onClick={ Reset }> Reset </button>
+                {/* <button type="reset" className="btn btn-warning" onClick={ Reset }> Reset </button> */}
               </CCol>
             </CRow>
 
 
           </CCol>
-
         </CRow>
+          <center>
+            <CButton typeof="reset" className="btn btn-danger" onClick={ resetClick }>Reset</CButton>
+          </center>
 
       </>
     )
