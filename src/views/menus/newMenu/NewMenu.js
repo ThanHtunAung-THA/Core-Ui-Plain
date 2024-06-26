@@ -52,6 +52,16 @@ const NewMenu=()=>{
     setSelectedEskill (' -- Select -- ');
   }
 
+  const sendClick= () => {
+    localStorage.setItem("NAME", name);
+    localStorage.setItem("PHONE", phone);
+    localStorage.setItem("EMAIL", email);
+    localStorage.setItem("BIRTHDAY", birthday);
+    localStorage.setItem("JSKILL", selectedJskill);
+    localStorage.setItem("ESKILL", selectedEskill);
+
+  }
+
 
     return(
       <>
@@ -147,7 +157,8 @@ const NewMenu=()=>{
           </CCol>
         </CRow>
           <center>
-            <CButton typeof="reset" className="btn btn-danger" onClick={ resetClick }>Reset</CButton>
+            <CButton className="btn btn-outline-success" onClick={ sendClick }>Send</CButton> &emsp;
+            <CButton className="btn btn-outline-danger" onClick={ resetClick }>Reset</CButton>
           </center>
 
       </>
