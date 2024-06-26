@@ -12,8 +12,14 @@ const TestCode=()=>{
     const [jskill,setEnglishSkill] = useState(localStorage.getItem("JSKILL"));
     const [eskill,setJapaneseSkill] = useState(localStorage.getItem("ESKILL"));
 
-    const deleteLS = () => {
-
+    const clearAll = () => {
+        localStorage.clear();
+        setName(null);
+        setPhone(null);
+        setEmail(null);
+        setBirthday(null);
+        setJapaneseSkill(null);
+        setEnglishSkill(null);
     }
 
     return(
@@ -57,7 +63,7 @@ const TestCode=()=>{
             </div>
 
             <center>
-                <CButton className="btn btn-danger" onClick={ deleteLS }>
+                <CButton className="btn btn-danger" onClick={ clearAll }>
                   Delete localStorage        { /* homework */ }
                 </CButton>
             </center>
