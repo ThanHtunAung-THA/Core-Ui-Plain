@@ -85,6 +85,11 @@ export default [
         name: 'New Menu',
         to: '/menus/NewMenu',
       },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Welcome',
+        to: '/menus/Welcome',
+      },
     ]
   },
 

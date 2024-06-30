@@ -1,5 +1,6 @@
 import { CButton, CCol, CInput, CLabel, CRow, CSelect } from "@coreui/react";
 import React, { useState } from "react";
+import PopUp from "./PopUp";
 
 const NewMenu=()=>{
 
@@ -9,6 +10,7 @@ const NewMenu=()=>{
   const [ birthday, setBirthday ] = useState("");
   const [ selectedJskill, setSelectedJskill ] = useState("");
   const [ selectedEskill, setSelectedEskill ] = useState("");
+  const [popUpShow,setPopUpShow] = useState(false);
 
 
   const [ japaneseSkill, setJapaneseSkill ] = useState([
@@ -62,6 +64,9 @@ const NewMenu=()=>{
 
   }
 
+  const popUpClick= ()=>{
+    setPopUpShow(true);
+  }
 
     return(
       <>
@@ -158,7 +163,22 @@ const NewMenu=()=>{
         </CRow>
           <center>
             <CButton className="btn btn-outline-success" onClick={ sendClick }>Send</CButton> &emsp;
-            <CButton className="btn btn-outline-danger" onClick={ resetClick }>Reset</CButton>
+            <CButton className="btn btn-outline-danger" onClick={ resetClick }>Reset</CButton> &emsp;
+            <CButton className="btn btn-outline-danger"
+            onClick={popUpClick}
+            >PopUp</CButton> &emsp;
+
+            <PopUp 
+              popUpShow={popUpShow}
+              closeClick={() => setPopUpShow(false)} 
+              name = {name}
+              email = {email}
+              phone = {phone}
+              birthday = {birthday}
+              jskill = {selectedJskill}
+              eskill = {selectedEskill}
+            />
+
           </center>
 
       </>
