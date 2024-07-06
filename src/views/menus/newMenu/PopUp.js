@@ -2,7 +2,7 @@ import { CCol, CModal, CModalBody, CModalHeader, CRow } from "@coreui/react";
 import React from "react";
 
 const PopUp = (props) => {
-    let {popUpShow,closeClick,name,email,phone,birtday,jskill,eskill} = props;
+    let {popUpShow,closeClick,name,email,phone,birthday,jskill,eskill} = props;
 
     return (
        <>
@@ -17,7 +17,7 @@ const PopUp = (props) => {
             <CRow >
             <span onClick={closeClick}
             style={{fontSize : "20px"}}
-            >X</span>  
+            >input-data-Popup</span>  
             </CRow>
         </CModalHeader> 
 
@@ -26,7 +26,7 @@ const PopUp = (props) => {
         </CModalBody>
             <h2>Detail Infomation</h2>
 
-            <CRow className = 'mt-3'>
+            <CRow className = 'mt-3 ml-3'>
                 <CCol lg='4'>
                     <h4>Name : </h4>
                 </CCol>
@@ -34,7 +34,7 @@ const PopUp = (props) => {
                     <h4>{name}</h4>
                 </CCol>
             </CRow>
-            <CRow>
+            <CRow className = 'mt-3 ml-3'>
                 <CCol lg='4'>
                     <h4>Email : </h4>
                 </CCol>
@@ -43,7 +43,7 @@ const PopUp = (props) => {
                 </CCol>
             </CRow>
 
-            <CRow className = 'mt-3'>
+            <CRow className = 'mt-3 ml-3'>
                 <CCol lg='4'>
                     <h4>Phone : </h4>
                 </CCol>
@@ -51,16 +51,16 @@ const PopUp = (props) => {
                     <h4>{phone}</h4>
                 </CCol>
             </CRow>
-            <CRow>
+            <CRow className = 'mt-3 ml-3'>
                 <CCol lg='4'>
                     <h4>Birthday : </h4>
                 </CCol>
                 <CCol lg='4'>
-                    <h4>{birtday}</h4>
+                    <h4>{birthday}</h4>
                 </CCol>
             </CRow>
 
-            <CRow className = 'mt-3'>
+            <CRow className = 'mt-3 ml-3'>
                 <CCol lg='4'>
                     <h4>Japanese skill : </h4>
                 </CCol>
@@ -68,7 +68,7 @@ const PopUp = (props) => {
                     <h4>{jskill}</h4>
                 </CCol>
             </CRow>
-            <CRow>
+            <CRow className = 'mt-3 ml-3'>
                 <CCol lg='4'>
                     <h4>English Skill : </h4>
                 </CCol>

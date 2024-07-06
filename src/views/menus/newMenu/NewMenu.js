@@ -1,7 +1,8 @@
 import { CButton, CCol, CInput, CLabel, CRow, CSelect } from "@coreui/react";
 import React, { useState } from "react";
 import PopUp from "./PopUp";
-import SuccessError from "../../common/SuccessError";
+import SuccessError from "../../common/SuccessError"; 
+import { nullChk, validateName, validateEmail } from "../../common/CommonValidation";
 
 const NewMenu=()=>{
 
@@ -68,11 +69,50 @@ const NewMenu=()=>{
   }
 
   const popUpClick= ()=>{
+
+    let errorMsg = [];
+
+    // if (!nullChk(name)) {
+    //   errorMsg.push("please fill name");
+    // }else if (!validateName(name)) {
+    //   errorMsg.push("pls fill character only in name");
+    // }
+
+    // if (!nullChk(phone)){
+    // errorMsg.push("please fill phone");
+    // }
+    // if (!nullChk(email)){
+    // errorMsg.push("please fill email");
+    // }else if (!validateEmail(email)) {
+    //   errorMsg.push("pls fill email format.")
+    // }
+
+    // if (!nullChk(birthday)){
+    // errorMsg.push("please fill birthday");
+    // }
+    // if (!nullChk(selectedJskill)){
+    // errorMsg.push("please fill japaneseSkill");
+    // }
+    // if (!nullChk(selectedEskill)){
+    // errorMsg.push("please fill englishSkill");
+    // }
+
+    // if (errorMsg.length > 0) {
+    //   setError(errorMsg);
+    // }else {
+    //   setError([]);
+    //   setPopUpShow(true);
+
+    // }
     setPopUpShow(true);
+
   }
 
   const successClick = () => {
-    setSuccess (["successfully clicked name"]);
+    setSuccess (["successfully clicked name", " try click for phone"]);
+  } 
+  const errorClick = () => {
+    setError (["errorfully clicked phone", " try click for name"]);
   } 
 
     return(
@@ -95,7 +135,7 @@ const NewMenu=()=>{
             <br /><br />
             <CRow>
               <CCol lg="1"></CCol>
-              <CCol lg="3"><CLabel className="mt-1"> Phone </CLabel></CCol>
+              <CCol lg="3"><CLabel className="mt-1" onClick={ errorClick }> Phone </CLabel></CCol>
               <CCol lg="7"> <CInput type="text" value={ phone } onChange={ phoneChange } /> </CCol>
               <CCol lg="1"></CCol>
             </CRow>
@@ -171,25 +211,32 @@ const NewMenu=()=>{
 
           </CCol>
         </CRow>
+        
           <center>
             <CButton className="btn btn-outline-success" onClick={ sendClick }>Send</CButton> &emsp;
             <CButton className="btn btn-outline-danger" onClick={ resetClick }>Reset</CButton> &emsp;
             <CButton className="btn btn-outline-danger"
             onClick={popUpClick}
             >PopUp</CButton> &emsp;
+          </center>
 
-            <PopUp 
+          <PopUp 
               popUpShow={popUpShow}
               closeClick={() => setPopUpShow(false)} 
-              name = {name}
-              email = {email}
-              phone = {phone}
-              birthday = {birthday}
-              jskill = {selectedJskill}
-              eskill = {selectedEskill}
+              name = {"name"}
+              email = {"email"}
+              phone = {"phone"}
+              birthday = {"birthday"}
+              jskill = {"selectedJskill"}
+              eskill = {"selectedEskill"}
+              // name = {name}
+              // email = {email}
+              // phone = {phone}
+              // birthday = {birthday}
+              // jskill = {selectedJskill}
+              // eskill = {selectedEskill}
             />
 
-          </center>
 
       </>
     )
