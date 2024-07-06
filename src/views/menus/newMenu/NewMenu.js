@@ -1,6 +1,7 @@
 import { CButton, CCol, CInput, CLabel, CRow, CSelect } from "@coreui/react";
 import React, { useState } from "react";
 import PopUp from "./PopUp";
+import SuccessError from "../../common/SuccessError";
 
 const NewMenu=()=>{
 
@@ -11,6 +12,8 @@ const NewMenu=()=>{
   const [ selectedJskill, setSelectedJskill ] = useState("");
   const [ selectedEskill, setSelectedEskill ] = useState("");
   const [popUpShow,setPopUpShow] = useState(false);
+  const [ success, setSuccess ] = useState([]);
+  const [ error, setError ] = useState([]);
 
 
   const [ japaneseSkill, setJapaneseSkill ] = useState([
@@ -68,17 +71,24 @@ const NewMenu=()=>{
     setPopUpShow(true);
   }
 
+  const successClick = () => {
+    setSuccess (["successfully clicked name"]);
+  } 
+
     return(
       <>
         <h1 className="mt-3" align="center">Register Form</h1>
         <br /><br />
-
+        <SuccessError
+          success = { success }
+          error = { error }
+        />
         <CRow>
 
           <CCol lg="6">
             <CRow>
               <CCol lg="1"></CCol>
-              <CCol lg="3"><CLabel className="mt-1"> Name </CLabel></CCol>
+              <CCol lg="3"><CLabel className="mt-1" onClick={ successClick }> Name </CLabel></CCol>
               <CCol lg="7"> <CInput type="text" value={ name } onChange={ nameChange } /> </CCol>
               <CCol lg="1"></CCol>
             </CRow>
