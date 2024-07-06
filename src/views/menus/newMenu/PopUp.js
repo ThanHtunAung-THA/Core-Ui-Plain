@@ -20,11 +20,7 @@ const PopUp = (props) => {
             >input-data-Popup</span>  
             </CRow>
         </CModalHeader> 
-
-        <CModalBody>
-            <p>Detail</p>
-        </CModalBody>
-            <h2>Detail Infomation</h2>
+            <center><h2>Detail Infomation</h2></center>
 
             <CRow className = 'mt-3 ml-3'>
                 <CCol lg='4'>
@@ -76,11 +72,6 @@ const PopUp = (props) => {
                     <h4>{eskill}</h4>
                 </CCol>
             </CRow>
-
-
-
-
-
        </CModal>
        
        </>
