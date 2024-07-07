@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Loading from "../../common/Loading";
 import { CButton } from "@coreui/react";
 import Chart from "react-apexcharts";
 
 
 const Welcome = (props) => {
+
+
+    useEffect( () => {
+
+        setLoading(true);
+        setTimeout( () => {
+            setLoading(false);
+        }, 5000);
+    }, []);
 
     const [ loading, setLoading ] = useState(false);
     const LoadClick = () => {
