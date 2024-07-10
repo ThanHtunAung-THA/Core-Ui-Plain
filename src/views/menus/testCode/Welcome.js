@@ -16,12 +16,14 @@ const Welcome = (props) => {
     }, []);
 
     const [ loading, setLoading ] = useState(false);
+
     const LoadClick = () => {
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
         }, 5000); // 5000 milliseconds = 5 seconds
     }
+    
     const options = {
         chart: {
             id: 'basic-bar'

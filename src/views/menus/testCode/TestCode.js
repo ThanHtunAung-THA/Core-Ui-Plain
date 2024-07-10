@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Welcome from "./Welcome";
 import { CButton, CLabel, CTooltip } from "@coreui/react";
+
 const TestCode=()=>{
     const str = localStorage.getItem("NAME");
     const truncatedStr = str ? str.substring(0, 15) : '';

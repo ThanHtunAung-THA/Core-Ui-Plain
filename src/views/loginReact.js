@@ -1,13 +1,13 @@
 import { CButton, CCard, CCardBody, CCardHeader, CCol, CInput, CRow } from "@coreui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const LoginReact = () => {
+  const [loading, setLoading] = useState(false);
 
-  useEffect( () => {
-
+  useEffect(() => {
     setLoading(true);
-    setTimeout( () => {
-        setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
     }, 5000);
   }, []);
 
@@ -15,36 +15,34 @@ const LoginReact = () => {
     <>
       <div className="login-bg min-vh-100">
         <CRow>
-          <CCol lg="6">
-            <img src="" alt="" />
-          </CCol>
-          <CCol lg="6">
+          <CCol lg="4"></CCol>
+
+          <CCol lg="4">
             <CRow>
-              <CCol lg="2"></CCol>
-              <CCol lg="8">
-                <CCard style={{ marginTop:"200px" }}>
+              <CCol lg="12">
+                <CCard style={{ marginTop: "200px" }}>
                   <CCardHeader>
-                    <h3 style={{ marginTop:"15px" }}>Login Form</h3>
+                    <h3 style={{ marginTop: "15px" }}>Login Form</h3>
                   </CCardHeader>
                   <CCardBody>
                     <CRow>
-                      <CCol lg="4">
+                      <CCol lg="3">
                         <h5 className="mt-2">Username</h5>
                       </CCol>
-                      <CCol lg="8">
-                        <CInput type="text" />
+                      <CCol lg="9">
+                        <CInput type="text" placeholder="eg. Zoro" />
                       </CCol>
                     </CRow>
                     <CRow className="mt-2">
-                      <CCol lg="4">
+                      <CCol lg="3">
                         <h5 className="mt-2">Password</h5>
                       </CCol>
-                      <CCol lg="8">
-                        <CInput type="password" />
+                      <CCol lg="9">
+                        <CInput type="password" placeholder="enter your password..." />
                       </CCol>
                     </CRow>
                     <br /><br />
-                    <CRow style={{ float:"right" }}>
+                    <CRow style={{ float: "right" }}>
                       <CButton className="btn btn-success">
                         Login
                       </CButton> &emsp;
@@ -52,15 +50,14 @@ const LoginReact = () => {
                   </CCardBody>
                 </CCard>
               </CCol>
-              <CCol lg="2"></CCol>
             </CRow>
           </CCol>
+
+          <CCol lg="4"></CCol>
         </CRow>
       </div>
-
     </>
-
-  )
-}
+  );
+};
 
 export default LoginReact;
