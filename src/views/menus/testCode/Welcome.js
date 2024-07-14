@@ -2,17 +2,28 @@ import React, { useState, useEffect } from "react";
 import Loading from "../../common/Loading";
 import { CButton } from "@coreui/react";
 import Chart from "react-apexcharts";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 
 const Welcome = (props) => {
 
+    let history = useHistory();
 
     useEffect( () => {
 
+        // preventing accessing without login == true
+        let flag = localStorage.getItem('LOGIN');
+        if (flag == "true") {
+            console.log("Login process success");
+        }else {
+            history.push('/loginReact');
+        }
+
+        // loading time
         setLoading(true);
         setTimeout( () => {
             setLoading(false);
-        }, 5000);
+        }, 3000);
     }, []);
 
     const [ loading, setLoading ] = useState(false);

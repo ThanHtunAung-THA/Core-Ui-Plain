@@ -1,8 +1,10 @@
 import { CButton, CCol, CInput, CLabel, CRow, CSelect } from "@coreui/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PopUp from "./PopUp";
 import SuccessError from "../../common/SuccessError"; 
 import { nullChk, validateName, validateEmail } from "../../common/CommonValidation";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
 
 const NewMenu=()=>{
 
@@ -15,6 +17,18 @@ const NewMenu=()=>{
   const [popUpShow,setPopUpShow] = useState(false);
   const [ success, setSuccess ] = useState([]);
   const [ error, setError ] = useState([]);
+  let history = useHistory();
+
+  useEffect( () => {
+    // preventing accessing without login == true
+    let flag = localStorage.getItem('LOGIN');
+    if (flag == "true") {
+        console.log("Login process success");
+    }else {
+        history.push('/loginReact');
+    }
+}, []);
+
 
 
   const [ japaneseSkill, setJapaneseSkill ] = useState([

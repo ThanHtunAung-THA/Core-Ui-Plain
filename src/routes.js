@@ -16,6 +16,7 @@ const routes = [
   { path: `/register`, name: 'Register', component: Register},
   { path: `/register2`, name: 'Register2', component: Register2},
   { path: `/content`, name: 'Content', component: Content},
+  { path: `/logout`, name: 'Logout', component: Logout},
 ];
 
 export default routes;

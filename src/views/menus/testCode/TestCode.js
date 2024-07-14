@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Welcome from "./Welcome";
 import { CButton, CLabel, CTooltip } from "@coreui/react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const TestCode=()=>{
     const str = localStorage.getItem("NAME");
@@ -12,6 +13,17 @@ const TestCode=()=>{
     const [birthday,setBirthday] = useState(localStorage.getItem("BIRTHDAY"));
     const [jskill,setEnglishSkill] = useState(localStorage.getItem("JSKILL"));
     const [eskill,setJapaneseSkill] = useState(localStorage.getItem("ESKILL"));
+    let history = useHistory();
+
+    useEffect( () => {
+        // preventing accessing without login == true
+        let flag = localStorage.getItem('LOGIN');
+        if (flag == "true") {
+            console.log("Login process success");
+        }else {
+            history.push('/loginReact');
+        }
+    }, []);    
 
     const clearAll = () => {
         localStorage.clear();
