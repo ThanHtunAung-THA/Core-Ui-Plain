@@ -18,6 +18,15 @@ const LoginReact = () => {
     $(window).resize(function () {
       setZoomSize(Math.round(window.devicePixelRatio * 100));
     });
+
+    // preventing accessing without login == true
+    let flag = localStorage.getItem('LOGIN');
+    if (flag == "true") {
+      history.push('/menus/Welcome');
+    }else {
+      history.push('/loginReact');
+    }
+    
   }, []);
 
   const userNameChange = (e) =>{
@@ -26,7 +35,6 @@ const LoginReact = () => {
   const passwordChange = (e) =>{
     setPassword (e.target.value);
   }
-
 
   const loginClick = () =>{
     let errMsg = [];
@@ -47,13 +55,14 @@ const LoginReact = () => {
     }else {
       setError([]);
       if (userName == "admin" && password == "12345") {
-        history.push('/menus/NewMenu');
+        history.push('/menus/Welcome');
         localStorage.setItem("LOGIN", true);
       }else {
         setError(["user name or password is wrong."]);
       }
     }
   }
+
 
   const KeyDownHandler = (e) => {
     if (e.key == "Enter") {

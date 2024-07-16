@@ -64,7 +64,18 @@ export default [
         _tag: 'CSidebarNavItem',
         name: 'Register',
         to: '/register',
-      }
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'LoginReact',
+        to: '/loginReact',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'LogoutReact',
+        to: '/logoutReact',
+      },
+      
     ]
 
   },

@@ -1,7 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HomePrime from "./homePrime";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Home = () => {
+
+  let history = useHistory();
+  useEffect( () => {
+    // preventing accessing without login == true
+    let flag = localStorage.getItem('LOGIN');
+    if (flag == "true") {
+        console.log("Login process success");
+    }else {
+        history.push('/loginReact');
+    }
+}, []);    
 
   // variables
   const [ username, setUsername ] = useState("");

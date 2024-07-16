@@ -23,7 +23,7 @@ const Welcome = (props) => {
         setLoading(true);
         setTimeout( () => {
             setLoading(false);
-        }, 3000);
+        }, 1000); // 1000 milliseconds = 5 seconds
     }, []);
 
     const [ loading, setLoading ] = useState(false);
@@ -56,7 +56,7 @@ const Welcome = (props) => {
                 <h1>Hello,{props.name}</h1>
                 <CButton className="ok-btn" onClick={ LoadClick }> Loading... </CButton>
             </div>
-            {/* <Loading start = {loading} /> */}
+            <Loading start = {loading} />
             <br /><br />
 
             <Chart options={ options } series={ series } type="bar" width="500" />
