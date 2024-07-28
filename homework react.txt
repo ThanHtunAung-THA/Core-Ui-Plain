@@ -1,5 +1,7 @@
-after input otp ,,, auto logining in.
-
-heading to newMenu
-
 otp fill form
+=============
+-able to type-in otp numbers in number input field, 
+-after each input, cursor must be move to next input fiel automatically
+-after the last input, must be auto logging in and show loading screen
+-heading to newmenu screen
+

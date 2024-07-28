@@ -101,6 +101,11 @@ export default [
         name: 'Welcome',
         to: '/menus/Welcome',
       },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'OTP',
+        to: '/menus/OTP',
+      },
     ]
   },
 
@@ -115,13 +120,6 @@ export default [
         name: 'HomePage',
         to: '/home',
         icon: 'cilHome'
-
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Register2',
-        to: '/register2',
-        icon: 'cilUser'
 
       },
       {
