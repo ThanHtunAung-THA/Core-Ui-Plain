@@ -23,7 +23,7 @@ const Welcome = (props) => {
         setLoading(true);
         setTimeout( () => {
             setLoading(false);
-        }, 1000); // 1000 milliseconds = 5 seconds
+        }, 1000); // 1000 milliseconds = 1 seconds
     }, []);
 
     const [ loading, setLoading ] = useState(false);

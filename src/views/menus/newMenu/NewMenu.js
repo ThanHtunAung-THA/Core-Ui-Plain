@@ -237,18 +237,18 @@ const NewMenu=()=>{
           <PopUp 
               popUpShow={popUpShow}
               closeClick={() => setPopUpShow(false)} 
-              name = {"name"}
-              email = {"email"}
-              phone = {"phone"}
-              birthday = {"birthday"}
-              jskill = {"selectedJskill"}
-              eskill = {"selectedEskill"}
-              // name = {name}
-              // email = {email}
-              // phone = {phone}
-              // birthday = {birthday}
-              // jskill = {selectedJskill}
-              // eskill = {selectedEskill}
+              // name = {"name"}
+              // email = {"email"}
+              // phone = {"phone"}
+              // birthday = {"birthday"}
+              // jskill = {"selectedJskill"}
+              // eskill = {"selectedEskill"}
+              name = {name}
+              email = {email}
+              phone = {phone}
+              birthday = {birthday}
+              jskill = {selectedJskill}
+              eskill = {selectedEskill}
             />
 
 

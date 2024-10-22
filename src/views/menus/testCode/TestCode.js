@@ -37,12 +37,12 @@ const TestCode=()=>{
 
     return(
         <>
-            <Welcome name="Sara"/>
-            <Welcome name="Nice"/>
+            {/* <Welcome name="Sara"/>
+            <Welcome name="Nice"/> */}
             <Welcome name="Elite"/>
             <br /><br />
 
-            <div className="container">
+            <div className="container"> 
                 <div className="card">
                     <div className="card-title">
                         <div className="card-body">
